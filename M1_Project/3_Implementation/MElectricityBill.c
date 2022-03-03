@@ -3,10 +3,10 @@
 #include <conio.h>
 #include <string.h>
 #include <Windows.h>
-#include "MainElectricityBill.h"
-#include "ElectricityBill.h"
-void Urban();
-void Rural();
+#include "MElectricityBill.h"
+#include "Electricbill.h"
+void Urban_Area();
+void Rural_area();
 void main()
 { 
 	details();
@@ -15,8 +15,8 @@ void main()
 	{
 		printf("****Electricity Bill****\n");
 		printf("Please enter your choice from below (1-2):\n");
-		printf("1. Urban\n");
-		printf("2. Rural\n");
+		printf("1. Urban_Area\n");
+		printf("2. Rural_Area\n");
 		printf("3. EXIT\n");
 		printf("Electricity Board Helpline: 8435 2340\n");
 		printf("Enter your choice :\n");
@@ -25,14 +25,14 @@ void main()
 		switch (option)
 		{
 		case 1:
-			Urban();
+			Urban_Area();
 			break;
 		case 2:
-			Rural();
+			Rural_Area();
 			break;
 		default:
-			printf("SORRY INVALID CHOICE!\n");
-			printf("PLEASE CHOOSE FROM 1 or 2\n");
+			printf("INVALID CHOICE!\n");
+			printf("PLEASE SELECT CASE 1 or 2\n");
 		}
 		getch();
 	} while (option != 3);

@@ -23,25 +23,32 @@ void details()
     scanf("%s", B.phonenumber);
 }
 
-void Urban_area()
+void Urban_Area()
 {
     int amount=0;
+    
     B.unitsconsumed;
-    if(B.unitsconsumed <=30 && B.unitsconsumed >= 0)
-    {
-        amount = B.unitsconsumed * 3.25; //3.25 is rupees
+    switch(amount){
+        case B.unitsconsumed <=30 && B.unitsconsumed >= 0:
+        {
+            amount = B.unitsconsumed * 3.25; //3.25 is rupees
+        }
+        case B.unitsconsumed >= 31 && B.unitsconsumed <= 100:
+        {
+            amount = B.unitsconsumed * 4.70;
+        }
+        case B.unitsconsumed >= 101 && B.unitsconsumed <= 200:
+        {
+            amount = B.unitsconsumed * 6.25;
+        }
+        default:
+            amount = B.unitsconsumed * 7.30;
+
     }
-    else if(B.unitsconsumed >= 31 && B.unitsconsumed <= 100)
-    {
-        amount = B.unitsconsumed * 4.70;
-    }
-    else if(B.unitsconsumed >= 101 && B.unitsconsumed <= 200)
-    {
-        amount = B.unitsconsumed * 6.25;
-    }
-    else
-    {
-        amount = B.unitsconsumed * 7.30;
+  
+    
+   
+        
     }
 
     printf("****Electricity Bill****\n\n");
@@ -50,26 +57,29 @@ void Urban_area()
     printf("Units you consumed per month: %d\n", B.unitsconsumed);
 }
 
-void Rural()
+void Rural_Area()
 {
     int amount=0;
     B.unitsconsumed;
-    if(B.unitsconsumed <=30 && B.unitsconsumed >= 0)
+    switch(amount)
     {
-        amount = B.unitsconsumed * 3.15; //3.25 is rupees
+        case B.unitsconsumed <=30 && B.unitsconsumed >= 0:
+        {
+            amount = B.unitsconsumed * 3.15;
+        }
+        case B.unitsconsumed >= 31 && B.unitsconsumed <= 100:
+        {
+            amount = B.unitsconsumed * 4.40;
+        }
+        case B.unitsconsumed >= 101 && B.unitsconsumed <= 200:
+        {
+            amount = B.unitsconsumed * 5.95;
+        }
+        default:
+            amount = B.unitsconsumed * 6.80;
     }
-    else if(B.unitsconsumed >= 31 && B.unitsconsumed <= 100)
-    {
-        amount = B.unitsconsumed * 4.40;
-    }
-    else if(B.unitsconsumed >= 101 && B.unitsconsumed <= 200)
-    {
-        amount = B.unitsconsumed * 5.95;
-    }
-    else
-    {
-        amount = B.unitsconsumed * 6.80;
-    }
+    
+ 
     printf("****Electricity Bill****\n\n");
     printf("Name : %s\n", B.name);
     printf("In Urban, your electricity bill is: %d\n", amount);
