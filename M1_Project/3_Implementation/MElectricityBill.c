@@ -25,10 +25,10 @@ void main()
 		switch (option)
 		{
 		case 1:
-			Urban_Area();
+			Urban_area();
 			break;
 		case 2:
-			Rural_Area();
+			Rural_area();
 			break;
 		default:
 			printf("INVALID CHOICE!\n");
